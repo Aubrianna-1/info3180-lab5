@@ -1,8 +1,8 @@
 <template>
 <h1 class="heading">Movies</h1>
 <ul class="img-grid">
-    <li v-for="m in movies" :key="m.id">
-        <div class="movie-card">
+    <li v-for="m in movies">
+        <div class="movie_card">
             <img :src= "m.poster"  alt="Movie poster">
             <div class="info">
                 <h3>{{ m.title }}</h3>
