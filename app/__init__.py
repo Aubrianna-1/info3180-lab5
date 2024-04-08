@@ -1,7 +1,16 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from .config import Config
+from flask_wtf.csrf import CSRFProtect
+# import flask migrate here
+from flask_migrate import Migrate 
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 app.config.from_object(Config)
 
-from app import views
+db = SQLAlchemy(app)
+# Instantiate Flask-Migrate library here
+migrate = Migrate(app, db)
+
+from app import views, models
