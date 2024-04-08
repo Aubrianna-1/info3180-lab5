@@ -1,22 +1,18 @@
 <template>
-    <h1 class="heading">Movies</h1>
-      
-      
-        <ul class="img-grid">
-          
-          <li v-for="m in movies" :key="m.id">
-  
-            <div class="movie-card">
-              <img :src= "m.poster"  alt="Movie poster">
-              <div class="info">
+<h1 class="heading">Movies</h1>
+<ul class="img-grid">
+    <li v-for="m in movies" :key="m.id">
+        <div class="movie-card">
+            <img :src= "m.poster"  alt="Movie poster">
+            <div class="info">
                 <h3>{{ m.title }}</h3>
                 <p>{{ m.description }}</p>
-              </div>
-          </div>
-          </li>
-        </ul>
+            </div>
+        </div>
+    </li>
+</ul>
       
-    </template>
+</template>
 
 <script setup>
 import { ref, onMounted } from "vue";
