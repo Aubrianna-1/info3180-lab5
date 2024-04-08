@@ -1,5 +1,5 @@
 <template>
-    <h1 id="p-heading">Movies</h1>
+    <h1 class="heading">Movies</h1>
       
       
         <ul class="img-grid">
@@ -33,8 +33,8 @@ function fetchmovies(){
    })
          .then((response) => response.json())
          .then((data) => {
-                  movies.value = data.Movies;
-                 console.log(movies.value);
+                movies.value = data.Movies;
+                console.log(movies.value);
          })
          .catch(function (error) {
               console.log(error);
